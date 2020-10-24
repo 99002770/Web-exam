@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel List</title>
+</head>
+<body>
+    <div>
+        <form action="http://localhost:3000/details">
+            View Students <input type="submit">
+        </form>
+    </div>
+    <div>
+        <form action="http://localhost:3000/searchByName">
+            Search Students by name <input type="text" name="sname">
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <form action="http://localhost:3000/searchByModeOfLiving">
+            <select name="sType">
+                <option>--type--</option>
+                <option value="Hostel">Hostel</option>
+                <option value="Day scholor">Day Scholar</option>
+            </select>
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        <form action="http://localhost:3000/searchByState">
+            <select name="sType">
+                <option>--type--</option>
+                <option value="North">North</option>
+                <option value="South">South</option>
+            </select>
+             students by state <input type="text" name="s">
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+		<p>
+			Select an Item to delete:
+			<select id="slItems"></select>
+			<button onclick="displyItem()">Delete</button>
+		</p>
+    </div>
+    <div>
+		<p>
+			List of Items currently with us!!
+		</p>
+		<ul id="lstString"></ul>
+	</div>
+    
+</body>
+</html>

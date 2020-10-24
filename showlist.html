@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="./Common.js"></script>
+	<script>
+		
+		
+		let stringValues = [];
+		function addNewItem(){
+			let value = $("txtString").value;
+			stringValues.push(value);
+			fillList();
+		}
+		function fillList(){
+			let selList = $("slItems");
+			let list = $("lstString");
+			list.innerHTML = ""
+			selList.innerHTML = ""
+
+			for (var i = 0; i < stringValues.length; i++) {
+				list.innerHTML += "<li>" + stringValues[i] +"</li>"
+			}
+			for (var i = 0; i < stringValues.length; i++) {
+				selList.innerHTML += "<option>" + stringValues[i] +"</option>"
+			}
+		}
+		
+	</script>
+	<div>
+		<input placeholder="Add New String" id="txtString">
+		<button onclick="addNewItem()">+</button>
+	</div>
+	<div>
+		<p>
+			List of Items currently with us!!
+		</p>
+		<ul id="lstString"></ul>
+	</div>
+	<div>
+		<p>
+			
+			<select id="slItems"></select>
+			
+		</p>
+	</div>
+</body>
+</html>
